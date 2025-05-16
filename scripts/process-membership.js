@@ -147,6 +147,14 @@ async function handleComment() {
 
 Welcome to the ${orgName} organization! 🎉`
       });
+
+      // Close the issue
+      await octokit.issues.update({
+        owner: context.repo.owner,
+        repo: context.repo.repo,
+        issue_number: issue.number,
+        state: 'closed'
+      });
     } catch (error) {
       console.error('Error inviting user:', error);
       await octokit.issues.createComment({
