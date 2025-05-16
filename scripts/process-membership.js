@@ -1,9 +1,12 @@
 const { Octokit } = require('@octokit/rest');
 const core = require('@actions/core');
+const github = require('@actions/github');
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN
 });
+
+const context = github.context;
 
 async function processMembershipRequest() {
   try {
