@@ -74,6 +74,8 @@ Once you've completed the template, we'll process your request.`
         issue_number: issueNumber,
         body: `@${username} Thank you for your interest in joining ${orgName}! An invitation has been sent to your email. Please check your inbox and accept the invitation.
 
+You can also view and accept the invitation directly on GitHub: https://github.com/orgs/${orgName}/invitation
+
 Welcome to the ${orgName} organization! 🎉`
       });
 
